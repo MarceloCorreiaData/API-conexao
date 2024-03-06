@@ -1,0 +1,45 @@
+/projeto
+    /app
+	app.py
+        __init__.py
+        /routes
+            __init__.py
+            arquivo_de_rotas.py
+        /models
+            __init__.py
+            modelos.py
+        /templates
+            templates.html
+        /static
+            arquivos_estáticos.css, .js, etc.
+    config.py
+    run.py
+
+/api_conexao
+    /app
+        __init__.py
+        app.py
+        /ml
+            __init__.py
+            model_preprocessing.py
+            model_definition.py
+            model_training.py
+    config.py
+    run.py
+
+
+Na estrutura acima:
+
+A pasta /app contém o pacote principal da  aplicação.
+A pasta /routes pode conter os arquivos que definem as rotas da  API. O código da API normalmente ficaria nos arquivos dentro da pasta /routes.
+A pasta /models pode conter arquivos que definem os modelos e banco de dados, caso use um banco de dados.
+A pasta /templates pode conter templates HTML, se for o caso de aplicação web em Flask com páginas HTML.
+A pasta /static pode conter arquivos estáticos como CSS e JavaScript, se for o caso de aplicação web em Flask com HTML.
+O arquivo config.py pode conter configurações da  aplicação.
+O arquivo run.py é o script que usado para iniciar a aplicação.
+
+
+
+No __init__.py:
+
+O conceito de create_app() é comum em aplicações Flask maiores, porque permite criar instâncias da aplicação com diferentes configurações, tornando mais fácil testar e modificar o comportamento da aplicação em diferentes ambientes (como desenvolvimento, teste e produção).
